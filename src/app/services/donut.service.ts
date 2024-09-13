@@ -10,7 +10,7 @@ export class DonutService {
 
   constructor(private http:HttpClient) { }
 
-  getDonut():Observable<Result>{
-    return this.http.get<Result>("https://grandcircusco.github.io/demo-apis/donuts.json")
+  getDonut():Observable<DonutModel>{
+    return this.http.get<DonutModel>("https://grandcircusco.github.io/demo-apis/donuts.json")
   }
 }

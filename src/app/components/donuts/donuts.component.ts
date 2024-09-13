@@ -10,7 +10,7 @@ import { DonutService } from '../../services/donut.service';
   styleUrl: './donuts.component.css'
 })
 export class DonutsComponent {
-  donutResult:Result = {} as;
+  donutResult:DonutModel = {} as DonutModel;
   constructor(private donutService:DonutService){}
 
   ngOnInit(){
@@ -18,7 +18,7 @@ export class DonutsComponent {
   }
 
   callApi(){
-    this.donutService.getDonut().subscribe((response:Result) => {
+    this.donutService.getDonut().subscribe((response:DonutModel) => {
       console.log(response);
       this.donutResult = response;
     });

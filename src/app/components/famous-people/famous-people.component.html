@@ -1,1 +1,17 @@
-<p>famous-people works!</p>
+<h2>Computer Science Hall of Fame</h2>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Innovation</th>
+        <th>Year</th>
+    </tr>
+    @for (p of famousResult.complete; track $index) {
+        <tr>
+            <td>{{p.firstName}}</td>
+            <td>{{p.lastName}}</td>
+            <td>{{p.year}}</td>
+            <td>{{p.innovation}}</td>
+        </tr>
+    }
+</table>

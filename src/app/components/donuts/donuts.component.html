@@ -1,6 +1,8 @@
-<h1>Donuts</h1>
-@for (d of donutResult; track $index) {
-    <h2>{{donutResult.name}}</h2>
-    <img src={{donutResult.photo}} >
-    <p>{{donutResult.photo_attribution}}</p>
+<h2>Donuts</h2>
+@for (d of donutResult.results; track $index) {
+    <div>
+        <h3>{{d.name}}</h3>
+        <img [src]="d.photo"/>
+        <a [href]="d.photo_attribution">Click for photo info!</a>
+    </div>
 }
